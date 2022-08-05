@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -25,8 +26,24 @@
     height: 30%; 
     object-fit: contain;
 }
-        </style> 
-    </head>
+    table, th, td {
+    border: 2px solid black;
+    border-radius: 10px
+}
+          tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+    #ip1 {
+    border-radius: 18px;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;    
+}
+      </style>
 
     <body id="page-top">
         <!-- Navigation-->
@@ -43,6 +60,7 @@
                         <li class="nav-item"><a class="nav-link" href="#machinelearning">Machine Learning</a></li>
                       <li class="nav-item"><a class="nav-link" href="#metrics">Evaluation Metrics</a></li>
                       <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#predict">Prediction</a></li>
                       <li class="nav-item"><a class="nav-link" 
 href="#team">Meet the Team</a></li>
                     </ul>
@@ -52,11 +70,12 @@ href="#team">Meet the Team</a></li>
         <!-- Header-->
       <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
-                <h1 class="fw-bolder">Crimes in the US</h1>
+              <h1 class="fw-bolder ">
+                Crimes in the US</h1>
                 <p class="lead">A website made to show how safe different states in the US are based on incarceration rates</p>
                 <a class="btn btn-lg btn-light" href="#about">Check out our work</a>
             </div>
-        </header>
+        </header>  
         <!-- About section-->
         <section id="about">
             <div class="container px-4">
@@ -84,50 +103,54 @@ href="#team">Meet the Team</a></li>
                     <div class="col-lg-8">
                         <h2>Exploration of the Data</h2>
                         <p class="lead">Let's look at some visualizations:</p>
-                      <p>
+                      <p><p class="lead">
                         The following graph shows the feature importance in the random forest
                       </p>
                       <div class = "container">
                         
                       
                       <img src = "a-1.png" alt = "Feature Importance in Random Forest" />
-                        <p>
-                          The following graph shows the Feature Importance in the decision tree
+                        <p><p class="lead">
+                          The following graph shows the feature importance in the decision tree
                         </p>
                       
                        <img src = "a.png" alt = "Feature Importance in decision tree" />
-                        <p>
+                        <p><p class="lead">
                           This linear regression plot shows the relation between prisoner count and the violent crime total
                         </p>
                       
                       <img src = "prisoner_count.png" alt = "Linear Regression Plot between prisoner count and total violent crimes" />
-                        <p>
+                        <p><p class="lead">
                           This box plot is done using matplotlib and shows the amount of prisoners per state
                         </p>
                       
                        <img src = "prisoner_per_state.png" alt = "Amount of prisoners per state" />
                       
                       
-                        <p>The following scatter plot shows the amount of violent crime based on prisoner count.</p><img class = "correlation" src = "violent_crime_based_on_prisoner_count.png" alt = "Total Violent Crime based on the prisoner count" />
+                        <p><p class="lead">The following scatter plot shows the amount of violent crime based on prisoner count.</p><img class = "correlation" src = "violent_crime_based_on_prisoner_count.png" alt = "Total Violent Crime based on the prisoner count" />
                       <p>The following bar plot is done using matplotlib and shows the amount of aggravated assaults per state.</p>
                        <img class = "correlation" src = "aggassault.png" alt = "Assault per state" />
                   </div>
-                      <p>
+                      <p><p class="lead">
                          The following bar plot is done using plotly and shows different crimes in each state/jurisdiction and whether it includes jail or not
                       </p>
-                      <a class="btn btn-lg btn-light bg-gradient" style="background-color:white; border-color:black" href="includes_jails.html">Includes Jail or not</a><br><br>
-                      <p>
+                      <a class="btn btn-lg btn-light" style="background-color:lightskyblue; border-color:deepskyblue" href="includes_jails.html">Includes Jail or not</a><br><br>
+                      <p><p class="lead">
                         The following bar plot is done using plotly and shows the amount of murder-manslaughter cases per state/jurisdiction
                       </p>
-                      <a class="btn btn-lg btn-light" style="background-color:white; border-color:black" href="manslaughterperstate.html">Murder-Manslaughter</a><br><br>
-                      <p>
+                      <a class="btn btn-lg btn-light" style="background-color:lightskyblue; border-color:deepskyblue" href="manslaughterperstate.html">Murder-Manslaughter</a><br><br>
+                      <p><p class="lead">
                         The following line graph is done using plotly and illustrates the amount of prisoner in each state/jurisdiction
                       </p>
-                      <a class="btn btn-lg btn-light" style="background-color:white; border-color:black" href="prisonerperstate.html">Prisoner Count</a><br><br>
-                      <p>
+                      <a class="btn btn-lg btn-light" style="background-color:lightskyblue; border-color:deepskyblue" href="prisonerperstate.html">Prisoner Count</a><br><br>
+                      <p><p class="lead">
                         The following scatter plot is done using plotly and shows the amount of burglary cases per state/jurisdiction
                       </p>
-                      <a class="btn btn-lg btn-light" style="background-color:white; border-color:black" href="burglaryperstate.html">Burglary</a><br><br>
+                      <a class="btn btn-lg btn-light" style="background-color:lightskyblue; border-color:deepskyblue" href="burglaryperstate.html">Burglary</a><br><br>
+                      <p><p class="lead">
+                        The following scatter plot is done using plotly and shows the amount of crimes per state based on population
+                      </p>
+                      <a class="btn btn-lg btn-light" style="background-color:lightskyblue; border-color:deepskyblue" href="violentcperstate.html">Crimes per State</a><br><br>
                     </div>
                 </div>
             </div>
@@ -143,7 +166,7 @@ href="#team">Meet the Team</a></li>
                       </div>
                        
            <br>           
-                      <p class="lead"><b>A correlation plot helps provide a visualization of the correlation between independent variables in the dataset.</b> Correlation plots have three different types of correlation between variables; positive correlation, negative correlation, and zero correlation. When two variables increase or decrease together, they have a positive correlation, which is represented by a 1. When one variable increases and the other variable decreases, it is a negative correlation, which is represented by a -1. When two variables have no impact on each other, there is zero correlation, which is represented by a 0.<hr> <p class="lead">Collinearity is the correlation between variables that expresses a linear relation in a regression model. Correlation indicates the strength of the linear relationship that might be existing between two variables. High collinearity among these variables causes overfitting in the model. To avoid this it's suggested to drop such variables.</p>
+                      <p class="lead"><b>A correlation plot helps provide a visualization of the correlation between independent variables in a dataset.</b> Correlation plots have three different types of correlation between variables; positive correlation, negative correlation, and zero correlation. When two variables increase or decrease together, they have a positive correlation, which is represented by a 1. When one variable increases and the other variable decreases, it is a negative correlation, which is represented by a -1. When two variables have no impact on each other, there is zero correlation, which is represented by a 0.<hr> <p class="lead">Collinearity is the correlation between variables that expresses a linear relation in a regression model. Correlation indicates the strength of the linear relationship that might be existing between two variables. High collinearity among these variables causes overfitting in the model. To avoid this it's suggested to drop such variables.</p>
                     </div>
                 </div>
             </div>
@@ -155,27 +178,30 @@ href="#team">Meet the Team</a></li>
                     <div class="col-lg-8">
                  <h2>Machine Learning Models</h2>
                       <p class= "lead"><b>Preparing the Data</b></p>
-                         <ul>
-                           It was important that the data we would input into the program did not contain any strings. The jurisdiction and includes_jails columns both had strings that had to be changed. We assigned a number from 1 to 50 for each state and changed the values in the jurisdiction column to numbers. The includes_jails columns was change into ones for yes and zeros for no.
+                         <ul><p class="lead">
+                           It was important that the data we would input into the program did not contain any strings. The jurisdiction and includes_jails columns both had strings that had to be changed. We assigned a number from 1 to 50 for each state and changed the values in the jurisdiction column to numbers. The includes_jails column was changed into ones for yes and zeros for no.
                       </ul>
                       
                         <h4>
                          <p class="lead"><b> 1. Linear Regressor </b> </p> 
                       </h4>
-                      <ul>Linear regression is one type of regression test <b>used to analyze the direct association between a dependent variable that must be continuous and one or more independent variable(s)</b>. The variable you want to predict is called the dependent variable. The variable you are using to predict the other variable's value is called the independent variable. The formula to find the linear regressor is
+                   
+                      <ul><p class="lead">
+                        Linear regression is one type of regression test <b>used to analyze the direct association between a dependent variable that must be continuous and one or more independent variable(s)</b>. The variable you want to predict is called the dependent variable. The variable you are using to predict the other variable's value is called the independent variable. The formula to find the linear regressor is
                         <b>
                           y=mx +b (y = dependent, x = independent, m = estimated slope, b = estimated intercept).
-                        </b>One example of how linear regression could be used in real life is that medical researchers often use linear regression to understand the relationship between drug dosage and the blood pressure of patients. For example, researchers might administer various dosages of a certain drug to patients and observe how their blood pressure responds.   </ul>
+                        </b>One example of how linear regression could be used in real life is that medical researchers often use linear regression to understand the relationship between drug dosage and the blood pressure of patients. For example, researchers might administer various dosages of a certain drug to patients and observe how their blood pressure responds.   
+                        </p></ul>
                        <h4>
                          <p class="lead"> <b> 2. Random Forest Regressor </b></p> 
                       </h4>
-                      <ul>Random forest is a type of supervised learning algorithm that <b>uses ensemble methods to solve both regression and classification problems</b>. The ensemble learning method is a technique that combines predictions from multiple machine learning algorithms to make a more accurate prediction than a single model. The algorithm operates was by constructing a multitude of decision trees at training time and outputting the mean/mode of prediction of the individual trees.One of the advantages of random forest is that it can perform both regression and classification tasks. It produces good predictions that can be understood easily and handle large datasets efficiently. One of the advantages of random forest is that it can perform both regression and classification tasks. It produces good predictions that can be understood easily and handle large datasets efficiently. One of the advantages of random forest is that it can perform both regression and classification tasks. It produces good predictions that can be understood easily and handle large datasets efficiently. 
+                      <ul><p class ="lead">Random forest is a type of supervised learning algorithm that <b>uses ensemble methods to solve both regression and classification problems</b>. The ensemble learning method is a technique that combines predictions from multiple machine learning algorithms to make a more accurate prediction than a single model. The algorithm operates was by constructing a multitude of decision trees at training time and outputting the mean/mode of prediction of the individual trees.One of the advantages of random forest is that it can perform both regression and classification tasks. It produces good predictions that can be understood easily and handle large datasets efficiently. One of the advantages of random forest is that it can perform both regression and classification tasks. It produces good predictions that can be understood easily and handle large datasets efficiently. One of the advantages of random forest is that it can perform both regression and classification tasks. It produces good predictions that can be understood easily and handle large datasets efficiently. </p>
                       </ul>
                       <h4>
                          <p class="lead"> <b> 3. Decision Tree Regressor </b> </p> 
                       </h4>
-                      <ul>
-                      Decision Tree Learning is a <b>supervised learning approach used in statistics, data mining, and machine learning, as it splits the data into partitions or branches, and then continue splitting each partition into smaller groups as the method moves up each branch</b>. Just like the Random forest Regression, the decision tree can also be used for both regression and classification problems. What set the difference is that the random forest algorithm provides a higher level of accuracy in predicting outcomes than the decision tree algorithm, which reduces the overfitting problems in decision trees and also reduces the variance and therefore improves the accuracy. The Decision tree builds regression or classification models in the form of a tree structure. It breaks down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes. A decision tree makes decisions by splitting nodes into sub-nodes. This process is performed multiple times during the training process until only homogenous nodes are left. And it is the only reason why a decision tree can perform so well. Therefore, node splitting is a key concept that everyone should know. A significant advantage of a decision tree is that it forces the consideration of all possible outcomes of a decision and traces each path to a conclusion. It creates a comprehensive analysis of the consequences along each branch and identifies decision nodes that need further analysis. It allows an individual or organization to weigh possible actions against one another based on their costs, probabilities, and benefits.
+                      <ul><p class ="lead">
+                        Decision Tree Learning is a <b>supervised learning approach used in statistics, data mining, and machine learning, as it splits the data into partitions or branches, and then continue splitting each partition into smaller groups as the method moves up each branch</b>. Just like the Random forest Regression, the decision tree can also be used for both regression and classification problems. What set the difference is that the random forest algorithm provides a higher level of accuracy in predicting outcomes than the decision tree algorithm, which reduces the overfitting problems in decision trees and also reduces the variance and therefore improves the accuracy. The Decision tree builds regression or classification models in the form of a tree structure. It breaks down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes. A decision tree makes decisions by splitting nodes into sub-nodes. This process is performed multiple times during the training process until only homogenous nodes are left. And it is the only reason why a decision tree can perform so well. Therefore, node splitting is a key concept that everyone should know. A significant advantage of a decision tree is that it forces the consideration of all possible outcomes of a decision and traces each path to a conclusion. It creates a comprehensive analysis of the consequences along each branch and identifies decision nodes that need further analysis. It allows an individual or organization to weigh possible actions against one another based on their costs, probabilities, and benefits.</p>
                     </ul>
                     
                     </div>
@@ -187,18 +213,18 @@ href="#team">Meet the Team</a></li>
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Evaluation Metrics</h2>
-                      <p class="lead">In 
+                        <h2>  Evaluation Metrics</h2>
+                      <p  class="lead">In 
                         <b> Machine Learning,
                        </b>the evaluation is vital to compare the performance of each and every model. There is a wide selection of metrics to choose from but only a small fraction suits for regression problems such as ours. We used 3 different metrics to rate the model predictions upon how close they are to the real values.</p>
                         <p class="lead">1. Mean Squared Error</p>
-                      <ul>
+                      <ul><p class="lead">
                         We will use the Linear Regression model to understand how our metric works. The model gave us a line (Blue) as output which predicts the results (Green Squares). Because it is very unlikely that the ideal line is found which matches the values perfectly, we have to calculate the deviation by measuring the vertical distance between our real value and the line.<br>
                         <img class = "other" src = "lreg.png" />
                       </ul>
                       
-                      <ul>
-                        MSE is calculated by the sum of square of prediction error which is real output minus predicted output and then divide by the number of data points. It gives you an absolute number on how much your predicted results deviate from the actual number.<br>
+                      <ul><p class="lead">
+                        MSE is calculated by the sum of square of prediction error which is real output minus predicted output and divided by the number of data points. It gives you an absolute number on how much your predicted results deviate from the actual number.<br>
                 
                    <img class = "other" src = "mse.png" />
                       </ul>
@@ -206,27 +232,66 @@ href="#team">Meet the Team</a></li>
                           
                         
                         <p class="lead">2. Mean Absolute Error</p>
-                  <ul>
+                  <ul><p class="lead">
                     Mean Absolute Error(MAE) is similar to Mean Square Error(MSE). However, instead of the sum of square of error in MSE, MAE is taking the sum of the absolute value of error.
                      MSE gives larger penalization to big prediction error by square it while MAE treats all errors the same.<br>
                     <img class = "other" src = "mae.png" />
                   </ul>
                       
                         <p class="lead">3. R² / Adjusted R²</p>
-                      <ul>
+                      <ul><p class="lead">
                         R Square is calculated by the sum of squared of prediction error divided by the total sum of the square which replaces the calculated prediction with mean. R Square value is between 0 to 1 and a bigger value indicates a better fit between prediction and actual value. Imagine you draw a horizontal line through all the values such that the total deviation is minimized. Now we compare that sum to the sum of the total distance to our calculated line and subtract the quotient of these two values from 1. If our line predicts the values far better than the horizontal line the subtractive should be small and our R² value close to 1.
                      <br><img class = "r2" src = "r.png" />
                        
                       </ul>
                        <p class="lead"> Final Results</p>
-                      <ul>Following shoes the results for the models implemented: <br>
-                        <img class='r2' src = "ss.png" /></ul>
+                      <ul>Following shows the results for the models implemented: <br>
+                       
+                        <b>
+                          Evaluation Results:</b><br>
+                      <table style = "width: 120%">
+                        <tr>
+                        <th>Metrics <br></th>
+                        <th>Linear Regression (LR)</th>
+                        <th>Decsion Tree Regressor (LR)</th>
+                        <th>Random Forest Regressor (RF)</th>
+                   
+                          </tr>
+                        <tr>
+                          <td>R^2Metric</td>
+                          <td>0.962</td>
+                          <td>0.989</td>
+                          <td>0.995</td>
+                        
+                        <tr>
+                          
+                          <td>MAE</td>
+                          <td>4929</td>
+                          <td>1338</td>
+                          <td>1762</td>
+                          
+                        <tr>
+                          
+                          <td>MSE*10^7</td>
+                          <td>5.4</td>
+                          <td>0.6</td>
+                          <td>1.1</td>
+                          
+                        <tr>
+                          
+                          <td>Accuracy</td>
+                          <td>94%</td>
+                          <td>98%</td>
+                          <td>99%</td>  
+                          
+                        </table></ul>
                     </div>
                 </div>
             </div>
         </section>
+        
         <!-- Conclusion section-->
-        <section class="bg-light" id="conclusion">
+        <section id="conclusion">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
@@ -237,6 +302,29 @@ After completing the data analysis and model evaluation, our team came to the co
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- Prediction -->
+        <section class="bg-light" id = "predict">
+           <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                      <h2>Make a Prediction</h2>
+                      <form action="" method="post">
+                      <input type="text" id="ip1" placeholder="Jail Situation"/>
+                      <input type="text" id="ip1" placeholder="State Population"/>
+                      <input type="text" id="ip1" placeholder="Murder-Manslaughter"/>
+                      <input type="text" id="ip1" placeholder="Burglary"/>
+                      <input type="text" id="ip1" placeholder="Aggravated Assault"/>
+                      <input type="text" id="ip1" placeholder="Rape"/>
+                      <input type="text" id="ip1" placeholder="Property Theft"/>
+                      <input type="text" id="ip1" placeholder="Total Crime"/>
+                      <input type="text" id="ip1" placeholder="Rape"/>
+                      <br><br>
+                        <center><button type = "submit" class="btn btn-lg btn-blue" style="background-color:lightskyblue; border-color:deepskyblue">Predict Prisoner Count</button></center>
+                      </form>
+                  </div>
+             </div>
+          </div>
         </section>
         <!-- Team section-->
         <section id="team">
